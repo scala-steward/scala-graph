@@ -600,7 +600,7 @@ trait GraphTraversalImpl[N, E[X] <: EdgeLikeIn[X]]
    *  not to overwrite `reverseIterator`.
    */
   final protected class ReverseStackTraversable[S <: NodeElement](
-      s: IndexedSeq[S],
+      s: Seq[S],
       takeWhile: Option[S => Boolean] = None,
       enclosed: Array[Option[S]] = Array[Option[S]](None, None)) extends Traversable[NodeT] {
 
